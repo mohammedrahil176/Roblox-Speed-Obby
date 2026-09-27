@@ -1,0 +1,20 @@
+# Roblox Studio / Rojo
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+*.lock
+default.project.json
+rojo.json
+.rojo_ui_data
+
+# MacOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Luau/LSP
+.luau-analyze.json
