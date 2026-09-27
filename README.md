@@ -58,8 +58,9 @@ The `ObbyGenerator` needs access to the physical obstacle scripts to clone them 
    - `KillBrick.server.lua`
    - `SpeedPad.server.lua`
 
-### 4. Setup GUI (Optional)
-The client scripts expect a `ScreenGui` named `MainUI` in **StarterGui**, featuring a `TimerLabel` and a `ShopFrame`. You will need to manually design these visual elements in Studio.
+### 4. Setup GUI
+The client scripts expect a specific `ScreenGui` hierarchy named `MainUI` in **StarterGui**. You will need to manually construct this layout in Studio. 
+Please strictly follow the [docs/UI_SETUP.md](./docs/UI_SETUP.md) guide for the exact hierarchy and mobile-friendly styling rules!
 
 ---
 

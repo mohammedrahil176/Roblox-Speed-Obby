@@ -2,6 +2,19 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Config = require(ReplicatedStorage:WaitForChild("Config"))
 
+local restartEvent = Instance.new("RemoteEvent")
+restartEvent.Name = "RestartRunEvent"
+restartEvent.Parent = ReplicatedStorage
+
+restartEvent.OnServerEvent:Connect(function(player)
+    local leaderstats = player:FindFirstChild("leaderstats")
+    if leaderstats then
+        -- Reset stage to 1 and respawn
+        leaderstats.Stage.Value = 1
+        player:LoadCharacter()
+    end
+end)
+
 -- When a character loads, teleport them to their current stage
 local function OnCharacterAdded(character, player)
     local humanoid = character:WaitForChild("Humanoid")
